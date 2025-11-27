@@ -88,34 +88,3 @@ bool deleteHelper(TrieNode* current, const string& word, int index) {
     
     return false;
 }
-
-int main() {
-    // Create root node
-    TrieNode* root = new TrieNode();
-    
-    // Insert some words
-    insert(root, "apple");
-    insert(root, "app");
-    insert(root, "banana");
-    insert(root, "bat");
-    
-    // Search for words
-    cout << "Search results:" << endl;
-    cout << "apple: " << (search(root, "apple") ? "Found" : "Not found") << endl;
-    cout << "app: " << (search(root, "app") ? "Found" : "Not found") << endl;
-    cout << "banana: " << (search(root, "banana") ? "Found" : "Not found") << endl;
-    cout << "bat: " << (search(root, "bat") ? "Found" : "Not found") << endl;
-    cout << "ball: " << (search(root, "ball") ? "Found" : "Not found") << endl;
-    
-    // Delete the word "app" from the trie
-    cout << "\nDeleting 'app'..." << endl;
-    deleteWord(root, "app");
-    
-    // Search again after deletion
-    cout << "\nAfter deletion:" << endl;
-    cout << "apple: " << (search(root, "apple") ? "Found" : "Not found") << endl;
-    cout << "app: " << (search(root, "app") ? "Found" : "Not found") << endl;
-    cout << "banana: " << (search(root, "banana") ? "Found" : "Not found") << endl;
-
-    return 0;
-}

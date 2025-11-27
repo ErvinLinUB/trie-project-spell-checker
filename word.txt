@@ -1,0 +1,7 @@
+apple
+banana
+bat
+cat
+dog
+orange
+grape
