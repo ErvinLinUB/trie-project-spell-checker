@@ -47,6 +47,9 @@ bool search(TrieNode* root, const string& word) {
     return current->isEndOfWord;
 }
 
+// Forward declaration
+bool deleteHelper(TrieNode* current, const string& word, int index);
+
 // Delete a word from the trie
 bool deleteWord(TrieNode* root, const string& word) {
     return deleteHelper(root, word, 0);
